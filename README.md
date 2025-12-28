@@ -2,6 +2,10 @@
 
 A comprehensive habit tracking application with AI-powered insights using React 19, Node.js, Express, MongoDB, and Gemini AI.
 
+## Demo
+
+🚀 **Live Demo**: [habit-track-app.vercel.app](https://habit-track-app.vercel.app)
+
 ## Features
 
 - **Authentication**: JWT-based login/register system with password hashing
