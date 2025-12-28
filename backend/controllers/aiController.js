@@ -31,10 +31,10 @@ Format as JSON: { "analysis": "", "suggestions": [], "quote": "", "focusArea": "
     
     try {
       const completion = await openai.chat.completions.create({
-        model: "gemini-2.0-flash",
+        model: "gemini-2.5-flash",
         messages: [{ role: "user", content: prompt }]
       });
-      const insights = JSON.parse(completion.choices[0].message.content);
+      const insights = JSON.parse(completion.choices[0].message.content.replace(/```json\n|\n```/g, "").trim());
       return res.json(insights);
     } catch (aiError) {
       console.log('AI API failed, using mock data:', aiError.message);
